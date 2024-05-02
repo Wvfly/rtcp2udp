@@ -83,7 +83,7 @@ class PortMap(object):
 
         except socket.error as msg:
             logging.error(msg)
-        except Exception, e:
+        except Exception as e:
             logging.error(e)
         finally:
             udp_clnt.close()
@@ -109,7 +109,7 @@ class PortMap(object):
 
         except socket.error as msg:
             logging.error(msg)
-        except Exception, e:
+        except Exception as e:
             logging.info(e)
         finally:
             self.tcp_sock.close()
@@ -143,7 +143,7 @@ class PortMap(object):
             return server
         except socket.error as msg:
             logging.error(msg)
-        except Exception, e:
+        except Exception as e:
             logging.error(e)
         
 if __name__ == '__main__':
@@ -171,5 +171,5 @@ if __name__ == '__main__':
         # bridge connection
         portmap.start_bridge_server()
     except KeyboardInterrupt:
-        print "Ctrl C - Stopping Server"
+        print("Ctrl C - Stopping Server")
         sys.exit(1)

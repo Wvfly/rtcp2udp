@@ -339,7 +339,7 @@ class socksocket(_orgsocket):
         try:
             self._sock = _socket.ssl(self._sock)
             self.__negotiatehttp(destaddr, destport)
-        except Exception, e:
+        except Exception as e:
             raise _socket.error(e)
 
     def __negotiatehttp(self, destaddr, destport):

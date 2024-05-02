@@ -60,7 +60,7 @@ class PortMap(object):
 
         except socket.error as msg:
             logging.error(msg)
-        except Exception, e:
+        except Exception as e:
             raise e
             logging.info(e)
         finally:
@@ -103,5 +103,5 @@ if __name__ == '__main__':
     try:
         portmap.udp_forward(tcp_conn,udp_conn)
     except KeyboardInterrupt:
-        print "Ctrl C - Stopping Client"
+        print("Ctrl C - Stopping Client")
         sys.exit(1)
