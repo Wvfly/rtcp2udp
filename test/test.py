@@ -33,4 +33,4 @@ udp_clnt.sendto('client\n',(udp_host,udp_port))
 udp_clnt.sendto('client2\n',(udp_host,udp_port))
 while True:
     udp_data,udp_addr = udp_clnt.recvfrom(buffsize)
-    print repr(udp_data), udp_addr
+    print(repr(udp_data), udp_addr)
